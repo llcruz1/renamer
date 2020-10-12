@@ -4,7 +4,7 @@ from os import path
 from os import rename
 from os import listdir
 from os.path import splitext
-
+o
 def menu():
     option = int(input("""What do you want to do?
         1. Insert string at beginning

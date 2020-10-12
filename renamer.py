@@ -77,14 +77,16 @@ def switch(option, path_to_file):
 def main():
     path_to_file = input("Full path to directory: ")
     option=0
-    while option != 6:
-        if path.exists(path_to_file):
-            if not path_to_file.endswith("/"):
-                path_to_file = path_to_file + "/"       
+
+    if path.exists(path_to_file):
+        if not path_to_file.endswith("/"):
+            path_to_file = path_to_file + "/"
+        while option != 6:       
             option = menu()
             switch(option, path_to_file)
-        else:
-            print("\nPath not found.\n")
+    else:
+        print("\nPath not found.\n")    
+    
       
 if __name__ == '__main__': 
       
